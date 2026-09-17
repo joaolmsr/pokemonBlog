@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artigos - Universo Pokémon</title>
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/navbar.css">
+    <link rel="stylesheet" href="./assets/css/pages/artigos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="./assets/imgs/icons/icon.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- Navbar injetada automaticamente -->
+    <div id="navbar"></div>
+
+    <main class="articles-container">
+        <header class="articles-header">
+            <h2>Artigos & Enciclopédia</h2>
+            <p>História, mecânicas competitivas e o impacto técnico dos monstros de bolso.</p>
+        </header>
+
+        <div class="articles-grid">
+            <!-- Artigo 1: Origem Geral -->
+            <article class="article-card">
+                <div class="article-thumb" style="background: linear-gradient(135deg, #fee2e2, #fecaca);">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+                        alt="Pikachu">
+                    <span class="category-badge">História</span>
+                </div>
+                <div class="article-body">
+                    <div class="article-meta">
+                        <span><i class="fa-regular fa-clock"></i> 4 min</span>
+                        <span><i class="fa-regular fa-calendar"></i> Geral</span>
+                    </div>
+                    <h3>O que é Pokémon? A Origem, o Conceito e o Sucesso Global</h3>
+                    <p>Entenda como a caça a insetos no Japão rural originou a franquia de entretenimento mais lucrativa
+                        do mundo.</p>
+                    <button class="btn-read" data-target="modal-artigo-1">
+                        Ler artigo <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Artigo 2: Competitivo TCG -->
+            <article class="article-card">
+                <div class="article-thumb" style="background: linear-gradient(135deg, #e0e7ff, #c7d2fe);">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                        alt="Charizard">
+                    <span class="category-badge" style="background-color: #4f46e5;">Competitivo</span>
+                </div>
+                <div class="article-body">
+                    <div class="article-meta">
+                        <span><i class="fa-regular fa-clock"></i> 5 min</span>
+                        <span><i class="fa-solid fa-layer-group"></i> TCG</span>
+                    </div>
+                    <h3>Como Funciona o Pokémon TCG? Estratégia, Decks e o Meta</h3>
+                    <p>Das regras básicas de 60 cartas aos torneios internacionais: entenda a lógica por trás do jogo de
+                        cartas colecionáveis.</p>
+                    <button class="btn-read" data-target="modal-artigo-2">
+                        Ler artigo <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Artigo 3: PokeAPI & Tecnologia -->
+            <article class="article-card">
+                <div class="article-thumb" style="background: linear-gradient(135deg, #dcfce7, #bbf7d0);">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/137.png"
+                        alt="Porygon">
+                    <span class="category-badge" style="background-color: #16a34a;">Desenvolvimento</span>
+                </div>
+                <div class="article-body">
+                    <div class="article-meta">
+                        <span><i class="fa-regular fa-clock"></i> 3 min</span>
+                        <span><i class="fa-solid fa-code"></i> PokeAPI</span>
+                    </div>
+                    <h3>Por Dentro da PokeAPI: Como Funciona o Banco de Dados Aberto</h3>
+                    <p>Entenda como requisições HTTP REST alimentam aplicações modernas com dados de mais de 1000
+                        monstrinhos.</p>
+                    <button class="btn-read" data-target="modal-artigo-3">
+                        Ler artigo <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- MODAL 1: ORIGEM -->
+    <div class="modal-overlay" id="modal-artigo-1">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <header class="modal-article-header">
+                <span class="category-badge">História</span>
+                <h2>O que é Pokémon? A Origem, o Conceito e o Sucesso Global</h2>
+                <div class="article-meta">
+                    <span><i class="fa-regular fa-user"></i> Redação Técnica</span>
+                    <span><i class="fa-regular fa-clock"></i> 4 min de leitura</span>
+                </div>
+            </header>
+            <div class="modal-article-body">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png"
+                    alt="Mewtwo" class="article-cover-modal">
+                <p><strong>Pokémon</strong> (abreviação japonesa de <em>Pocket Monsters</em>) nasceu da mente de Satoshi
+                    Tajiri em 1996. Inspirado pelo hábito de capturar insetos em sua infância, Tajiri quis criar uma
+                    experiência onde crianças pudessem trocar monstrinhos via cabo link no Game Boy original.</p>
+                <h4>O Conceito Central</h4>
+                <p>No universo fictício, humanos e criaturas coexistem em harmonia. Os Treinadores usam Pokébolas para
+                    registrar monstrinhos, viajam por ginásios regionais e disputam campeonatos para alcançar o título
+                    de Campeão da Liga Pokémon.</p>
+                <blockquote>"Pokémon foi desenhado desde o primeiro dia para priorizar a cooperação e a troca entre
+                    jogadores antes da competição pura."</blockquote>
+                <p>A franquia rapidamente expandiu de um jogo monocromático para animes, filmes de grande bilheteria e
+                    produtos que a tornaram a propriedade intelectual mais valiosa do mundo.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: TCG -->
+    <div class="modal-overlay" id="modal-artigo-2">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <header class="modal-article-header">
+                <span class="category-badge" style="background-color: #4f46e5;">Competitivo</span>
+                <h2>Como Funciona o Pokémon TCG? Estratégia, Decks e o Meta</h2>
+                <div class="article-meta">
+                    <span><i class="fa-regular fa-user"></i> Redação Técnica</span>
+                    <span><i class="fa-regular fa-clock"></i> 5 min de leitura</span>
+                </div>
+            </header>
+            <div class="modal-article-body">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png"
+                    alt="Venusaur" class="article-cover-modal">
+                <p>Lançado no final de 1996, o <strong>Pokémon Trading Card Game (TCG)</strong> traduz as batalhas
+                    virtuais dos consoles para mesas físicas de todo o planeta através de duelos de cartas altamente
+                    calculados.</p>
+                <h4>A Estrutura de um Baralho</h4>
+                <p>Todo deck competitivo é composto por exatamente <strong>60 cartas</strong>, divididas em três
+                    categorias essenciais:</p>
+                <p><strong>1. Pokémon:</strong> As peças de combate divididas entre Básicos e Evoluções.<br>
+                    <strong>2. Cartas de Treinador:</strong> Itens, Apoiadores e Estádios que controlam o fluxo de
+                    compra da mão e descarte.<br>
+                    <strong>3. Energias:</strong> O recurso obrigatório anexado a cada turno para pagar o custo de
+                    ataque.
+                </p>
+                <h4>O Objetivo da Partida</h4>
+                <p>Cada jogador separa 6 cartas viradas para baixo como <em>Cartas de Prêmio</em>. A cada nocaute em uma
+                    criatura adversária, você resgata uma ou mais cartas de prêmio. O primeiro duelista a coletar todas
+                    as 6 consagra-se campeão.</p>
+                <blockquote>"Um deck vitorioso no TCG depende 20% da força de ataque do Pokémon e 80% da consistência de
+                    compra do seu motor de cartas de Suporte."</blockquote>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 3: POKEAPI -->
+    <div class="modal-overlay" id="modal-artigo-3">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <header class="modal-article-header">
+                <span class="category-badge" style="background-color: #16a34a;">Desenvolvimento</span>
+                <h2>Por Dentro da PokeAPI: Como Funciona o Banco de Dados Aberto</h2>
+                <div class="article-meta">
+                    <span><i class="fa-regular fa-user"></i> Redação Técnica</span>
+                    <span><i class="fa-regular fa-clock"></i> 3 min de leitura</span>
+                </div>
+            </header>
+            <div class="modal-article-body">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/137.png"
+                    alt="Porygon" class="article-cover-modal">
+                <p>A <strong>PokeAPI</strong> é um dos projetos de código aberto mais famosos do mundo do
+                    desenvolvimento de software. Criada por Paul Hallett, ela funciona como uma enciclopédia RESTful
+                    pública que indexa dados completos sobre jogos, movimentos, habilidades e espécies de Pokémon.</p>
+                <h4>Endpoints e Paginação</h4>
+                <p>Ao fazer uma chamada HTTP GET para <code>https://pokeapi.co/api/v2/pokemon</code>, o servidor retorna
+                    payloads em formato JSON padronizados contendo paginação através de parâmetros <code>limit</code> e
+                    <code>offset</code>, tornando-a ideal para ensinar manipulação de APIs e paginação assíncrona no
+                    front-end.</p>
+                <h4>Cache e Performance</h4>
+                <p>Para suportar milhões de requisições mensais sem custo de infraestrutura descontrolado, a PokeAPI
+                    roda pesadas camadas de cache estático via Cloudflare e CDN global, garantindo respostas em
+                    milissegundos mesmo para aplicações que utilizam Vanilla JS sem backend intermediário.</p>
+                <blockquote>"A PokeAPI transformou o aprendizado de consumo assíncrono em algo divertido e visualmente
+                    estimulante para estudantes de tecnologia."</blockquote>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/components/navbar.js"></script>
+    <script src="./assets/js/pages/artigos.js"></script>
+</body>
+
+</html>

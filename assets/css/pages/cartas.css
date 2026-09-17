@@ -1,0 +1,168 @@
+.cards-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px 60px 20px;
+}
+
+.cards-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.cards-header h2 {
+  font-size: 28px;
+  color: #1f2937;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 15px;
+}
+
+/* Campo de busca */
+.cards-search-wrapper {
+  position: relative;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.cards-search-wrapper i {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  font-size: 16px;
+}
+
+.cards-search-wrapper input {
+  width: 100%;
+  padding: 13px 20px 13px 48px;
+  border-radius: 30px;
+  border: 2px solid #e5e7eb;
+  background: #ffffff;
+  outline: none;
+  font-size: 15px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+}
+
+.cards-search-wrapper input:focus {
+  border-color: #e60012;
+  box-shadow: 0 0 0 4px rgba(230, 0, 18, 0.15);
+}
+
+/* Grid com perspectiva 3D */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 32px;
+  perspective: 1000px;
+}
+
+/* O elemento é apenas a própria carta física */
+.tcg-card {
+  position: relative;
+  background: transparent;
+  border: none;
+  padding: 0;
+  border-radius: 12px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  will-change: transform, box-shadow;
+  transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+  aspect-ratio: 2.5 / 3.5;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagem da carta */
+.tcg-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  pointer-events: none;
+}
+
+/* Camada Holográfica Reflexiva */
+.tcg-shine {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0;
+  mix-blend-mode: color-dodge;
+  transition: opacity 0.25s ease;
+  background: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 200, 240, 0.4) 30%,
+    rgba(140, 220, 255, 0.25) 60%,
+    transparent 80%
+  );
+}
+
+/* Botão Carregar Mais */
+.load-more-container {
+  text-align: center;
+  margin-top: 45px;
+}
+
+.btn-load-more {
+  background-color: #e60012;
+  color: #ffffff;
+  border: none;
+  padding: 13px 40px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(230, 0, 18, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-load-more:hover {
+  background-color: #c40010;
+  transform: translateY(-2px);
+}
+
+.btn-load-more:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* RESPONSIVIDADE CARTAS TCG */
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+  }
+
+  .cards-header h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .cards-container {
+    padding: 20px 12px 50px 12px;
+  }
+}
+
+/* Desativa efeitos de rotação 3D pesados em touchscreens */
+@media (hover: none) {
+  .tcg-card:hover {
+    transform: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  }
+  
+  .tcg-shine {
+    display: none;
+  }
+}

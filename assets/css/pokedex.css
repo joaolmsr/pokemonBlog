@@ -1,0 +1,254 @@
+.pokedex-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px 60px 20px;
+}
+
+.pokedex-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.pokedex-header h2 {
+  font-size: 26px;
+  color: #2b2b2b;
+  margin-bottom: 16px;
+}
+
+.pokedex-search-wrapper {
+  position: relative;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.pokedex-search-wrapper i {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.pokedex-search-wrapper input {
+  width: 100%;
+  padding: 12px 18px 12px 42px;
+  border-radius: 25px;
+  border: 2px solid #ddd;
+  background: #fff;
+  outline: none;
+  font-size: 15px;
+}
+
+.pokedex-search-wrapper input:focus {
+  border-color: #e60012;
+}
+
+/* Grade Pokédex */
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+/* Card Estilo Brenda-A-S */
+.pokemon-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  border-radius: 16px;
+  color: #fff;
+  min-height: 140px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-number {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  opacity: 0.4;
+}
+
+.card-name {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.card-detail {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.card-types {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.type-pill {
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  text-align: center;
+  width: fit-content;
+}
+
+.pokemon-card img {
+  max-width: 95px;
+  height: 95px;
+  align-self: flex-end;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+/* Cores por Tipo Pokémon */
+.type-grass {
+  background-color: #49d0b0;
+}
+.type-fire {
+  background-color: #fa6c6c;
+}
+.type-water {
+  background-color: #76bdfe;
+}
+.type-bug {
+  background-color: #a8b732;
+}
+.type-normal {
+  background-color: #a8a878;
+}
+.type-poison {
+  background-color: #a040a0;
+}
+.type-electric {
+  background-color: #ffd86f;
+}
+.type-ground {
+  background-color: #e0c068;
+}
+.type-fairy {
+  background-color: #ee99ac;
+}
+.type-fighting {
+  background-color: #c03028;
+}
+.type-psychic {
+  background-color: #f85888;
+}
+.type-rock {
+  background-color: #b8a038;
+}
+.type-ghost {
+  background-color: #705898;
+}
+.type-ice {
+  background-color: #98d8d8;
+}
+.type-dragon {
+  background-color: #7038f8;
+}
+.type-steel {
+  background-color: #b8b8d0;
+}
+.type-dark {
+  background-color: #705848;
+}
+.type-flying {
+  background-color: #a890f0;
+}
+
+/* Botão Carregar Mais */
+.load-more-container {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.btn-load-more {
+  background-color: #e60012;
+  color: #fff;
+  border: none;
+  padding: 12px 36px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(230, 0, 18, 0.3);
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+}
+
+.btn-load-more:hover {
+  background-color: #c40010;
+  transform: scale(1.02);
+}
+
+.btn-load-more:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* RESPONSIVIDADE POKÉDEX */
+@media (max-width: 640px) {
+  .pokedex-container {
+    padding: 20px 14px 50px 14px;
+  }
+
+  .pokedex-header h2 {
+    font-size: 22px;
+  }
+
+  .pokedex-grid {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 colunas perfeitas no smartphone */
+    gap: 12px;
+  }
+
+  .pokemon-card {
+    min-height: 125px;
+    padding: 12px;
+  }
+
+  .card-name {
+    font-size: 15px;
+  }
+
+  .pokemon-card img {
+    max-width: 75px;
+    height: 75px;
+  }
+
+  .type-pill {
+    font-size: 10px;
+    padding: 2px 8px;
+  }
+}
+
+@media (max-width: 380px) {
+  .pokedex-grid {
+    grid-template-columns: 1fr; /* 1 coluna se o visor for muito compacto */
+  }
+}

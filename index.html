@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Blog - Home</title>
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/navbar.css">
+    <link rel="stylesheet" href="./assets/css/pages/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="./assets/imgs/icons/icon.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- Injetado automaticamente pelo navbar.js -->
+    <div id="navbar"></div>
+
+    <main class="home-container">
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-text">
+                <span class="badge">Portal Oficial de Treinadores</span>
+                <h1>Explore o Universo Pokémon</h1>
+                <p>Acesse enciclopédias completas, coleções de cartas TCG em alta resolução e conteúdos técnicos sobre
+                    os monstros de bolso.</p>
+                <div class="hero-buttons">
+                    <a href="pokedex.html" class="btn btn-primary"><i class="fa-solid fa-gamepad"></i> Acessar
+                        Pokédex</a>
+                    <a href="cartas.html" class="btn btn-secondary"><i class="fa-solid fa-layer-group"></i> Ver Cartas
+                        TCG</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+                    alt="Pikachu">
+            </div>
+        </section>
+
+        <!-- CARDS DE RECURSOS RÁPIDOS -->
+        <section class="features">
+            <a href="pokedex.html" class="feature-card">
+                <div class="feature-icon bg-red"><i class="fa-solid fa-circle-dot"></i></div>
+                <h3>Pokédex Completa</h3>
+                <p>Consulte status, tipos e artes oficiais de todos os Pokémon da franquia.</p>
+            </a>
+
+            <a href="cartas.html" class="feature-card">
+                <div class="feature-icon bg-blue"><i class="fa-solid fa-id-card"></i></div>
+                <h3>Coleção TCG</h3>
+                <p>Explore cartas colecionáveis físicas renderizadas com efeitos holográficos.</p>
+            </a>
+
+            <a href="artigos.html" class="feature-card">
+                <div class="feature-icon bg-green"><i class="fa-solid fa-book-open"></i></div>
+                <h3>Artigos & Estratégias</h3>
+                <p>Guias de batalha, curiosidades sobre o meta competitivo e análises técnicas.</p>
+            </a>
+        </section>
+
+        <!-- DESTAQUE DO DIA -->
+        <section class="highlight-section">
+            <div class="highlight-card">
+                <div class="highlight-info">
+                    <span class="highlight-tag">Pokémon em Destaque</span>
+                    <h2 id="highlight-name">Carregando...</h2>
+                    <p id="highlight-desc">Conectando à base da PokeAPI para buscar as estatísticas deste monstro de
+                        bolso...</p>
+                    <div id="highlight-types" class="highlight-types"></div>
+                </div>
+                <div class="highlight-media">
+                    <img id="highlight-img" src="" alt="Destaque">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="./assets/imgs/logo.png" alt="Pokémon Logo" class="footer-logo">
+                <p>Projeto do curso técnico</p>
+            </div>
+
+            <div class="footer-social">
+                <span class="social-title">Conecte-se comigo</span>
+                <div class="social-links">
+                    <a href="https://github.com/joaolmsr" target="_blank" rel="noopener noreferrer"
+                        class="social-btn github" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-lima-21982b340/" target="_blank" rel="noopener noreferrer"
+                        class="social-btn linkedin" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://instagram.com/joaolmsr" target="_blank" rel="noopener noreferrer"
+                        class="social-btn instagram" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pokémon Blog. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="./assets/js/components/navbar.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
